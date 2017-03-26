@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.team07.hds.hds_status.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <TextView
+        android:id="@+id/project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="รหัสโครงการ"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/project_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/project"
+        android:paddingTop="10dp"
+        android:text="1221223332"
+        android:textColor="#778899"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/issue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/project"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:text="ปัญหา"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/issue_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/project_code"
+        android:layout_alignStart="@+id/project_code"
+        android:layout_below="@+id/project"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:text="มีข้อผืดพลาด"
+        android:textColor="#778899"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/Department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/issue"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:text="หน่วยงาน"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/Department_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/issue_text"
+        android:layout_below="@+id/issue_text"
+        android:paddingTop="10dp"
+        android:text="ไอเซอ"
+        android:textColor="#778899"
+        android:textSize="20dp" />
+
+
+    <CheckBox
+        android:id="@+id/wait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Department_text"
+        android:layout_marginTop="58dp"
+        android:layout_toEndOf="@+id/issue"
+        android:layout_toRightOf="@+id/issue" />
+
+    <CheckBox
+        android:id="@+id/Ongoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/wait"
+        android:layout_alignBottom="@+id/wait"
+        android:layout_alignLeft="@+id/Department_text"
+        android:layout_alignStart="@+id/Department_text" />
+
+    <CheckBox
+        android:id="@+id/finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_Ongoing"
+        android:layout_alignLeft="@+id/text_finish"
+        android:layout_alignStart="@+id/text_finish"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp" />
+
+    <TextView
+        android:id="@+id/text_wait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wait"
+        android:layout_toLeftOf="@+id/project_code"
+        android:layout_toStartOf="@+id/project_code"
+        android:text="ยังไม่ดำเนินการ"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/text_Ongoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Department_text"
+        android:layout_alignRight="@+id/Department_text"
+        android:layout_below="@+id/Ongoing"
+        android:text="กำลังดำเนินการ"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/text_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finish"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/Department_text"
+        android:layout_toRightOf="@+id/Department_text"
+        android:text="ดำเนินการเสร็จสิ้น"
+        android:textColor="#000000" />
+
+</RelativeLayout>
